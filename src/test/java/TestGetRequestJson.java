@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class TestGetRequest {
+public class TestGetRequestJson {
 
     @Test(description = "testing GET method")
     public  void firstTest () {
