@@ -19,7 +19,8 @@ public class TestPostDeleteRequestJson {
     @BeforeTest
     public void getData() throws IOException {
         InputStream fis =
-            new FileInputStream("D:\\Work\\rest_assured1\\src\\main\\resources\\env.properties");
+            //new FileInputStream("D:\\Work\\rest_assured1\\src\\main\\resources\\env.properties");
+            new FileInputStream("C:\\WorkingDir\\API_tests\\RESR_assured_first\\src\\main\\resources\\env.properties");
         prop.load(fis);
     }
 
