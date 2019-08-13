@@ -5,21 +5,15 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class TestBooks extends BaseTest {
+public class DynamicJson extends BaseTest {
 
     @Test
-    public void bookAddingTest() {
+    public void addBook() {
 
         RestAssured.baseURI = "http://216.10.245.166";
         Response resp = (Response) given()
             .header("Content-Type", "application/json")
-            .body("{\n" +
-                "\n" +
-                "\"name\":\"Learn Appium Automation with Java\",\n" +
-                "\"isbn\":\"UnicName\",\n" +
-                "\"aisle\":\"227\",\n" +
-                "\"author\":\"John foe\"\n" +
-                "}\n")
+            .body(Payload.addBookBodyJson("ffff", "6554"))
             .when()
             .post("Library/Addbook.php")
             .then().assertThat().statusCode(200)

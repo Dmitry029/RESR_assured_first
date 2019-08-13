@@ -1,6 +1,6 @@
 public class Payload {
 
-    public static String getPostBody(){
+    public static String getPostBody() {
         return "{\n" +
             "    \"location\":{\n" +
             "        \"lat\" : -38.383494,\n" +
@@ -16,9 +16,19 @@ public class Payload {
             "}\n";
     }
 
-    public static String getDeleteBody(String placeId){
+    public static String getDeleteBody(String placeId) {
         return "{" +
             "\"place_id\": \"" + placeId + "\"" +
             "}";
+    }
+
+    public static String addBookBodyJson(String isbn, String aisle) {
+        return "{\n" +
+            "\n" +
+            "\"name\":\"Learn Appium Automation with Java\",\n" +
+            "\"isbn\":\"" + isbn + "\",\n" +
+            "\"aisle\":\"" + aisle + "\",\n" +
+            "\"author\":\"John foe\"\n" +
+            "}\n";
     }
 }
