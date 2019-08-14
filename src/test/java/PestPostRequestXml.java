@@ -50,8 +50,4 @@ public class PestPostRequestXml extends BaseTest{
 
 
     }
-
-    public static String GenerateStringFromResource(String path) throws IOException {
-        return new String(Files.readAllBytes(Paths.get(path)));
-    }
 }
